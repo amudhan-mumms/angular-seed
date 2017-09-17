@@ -1,1 +1,27 @@
-<p>This is the partial for view 1.</p>
+<div class="modal-block">
+  <div class="modal-header">
+    <h2>Submit form</h2>
+  </div>    
+  <form role="form"  ng-submit="addClient()">
+    <div class="modal-body">
+      <label for="name">Name: </label>
+      <input type="text" id="name" class="form-control input" ng-model="client.name" value="  {{client.name}}" />
+      <br/>
+      <label for="age">Age : </label>
+      <input type="text" id="age" class="form-control input" ng-model="client.age" value="{{client.age}}" />
+      <br/>
+      <label for="time-from" class="time-picker-label control-label">Time :</label>
+      <input id="time-from" type="text" class="form-control time-picker-input" size="8" ng-model="time" name="time-from" bs-timepicker data-hour-step="1" data-minute-step="1"value="{{client.timeFrom}}">
+      <br/>
+      <label for="duration">Duration :</label>
+      <input type="text" class="form-control" size="8" ng-model="duration" name="time" bs-timepicker
+            data-time-format="HH:mm" data-length="1" data-minute-step="1" data-arrow-behavior="picker">
+       <br/>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary" >Confirm</button>
+      <button class="btn btn-warning" ng-click="cancel()" >Cancel</button>
+    </div>
+  </form>
+</div>
+
+</div>
